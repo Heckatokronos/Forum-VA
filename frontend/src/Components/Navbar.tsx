@@ -1,30 +1,33 @@
 import React from "react";
+import { Navbar, Container, Nav, Form, FormControl, Button } from "react-bootstrap";
+import Login from "../Pages/Login";
 
-import { NavbarBrand, Navbar, Container, Nav, Form, FormControl, Button } from "react-bootstrap";
+const Navigation: React.FC = () => {
 
-const NavbarShowcase: React.FC = () => (
-    <>
-        <Navbar bg="transparent">
+
+
+    return (
+        <Navbar bg="transparend" variant="dark">
             <Container>
                 <Navbar.Brand href="#home">
                     Vinyl Alliance</Navbar.Brand>
                 <Nav className="me-auto" >
                     <Nav.Link href="#home">Главная страница</Nav.Link>
-                    <Nav.Link href="#news">Новости</Nav.Link>
+                    <Nav.Link href="/news">Новости</Nav.Link>
                 </Nav>
                 <Form className="d-flex">
                     <FormControl
                         type="search"
-                        placeholder="Search"
+                        placeholder="Поиск"
                         className="me-2"
                         aria-label="Search"
+                        style={{ borderRadius: 8 }}
                     />
-                    <Button variant="outline-success">Search</Button>
                 </Form>
+                <Button variant="outline-light" style={{ borderRadius: 8 }} href="/pages/Login">Профиль</Button>
             </Container>
         </Navbar>
-        <br />
-    </>
-);
+    );
+};
 
-export default NavbarShowcase;
+export default Navigation;

@@ -1,22 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { Button } from 'react-bootstrap';
-import { styled } from '@linaria/react';
-import NavbarShowcase from './Components/Navbar'
+import Navigation from './Components/Navbar'
+import Home from './Pages/Home';
+import News from './Pages/News';
+import Login from './Pages/Login';
+
 
 const App: React.FC = () => {
+
+
+
   return (
-    <>
-      <NavbarShowcase />
-    </>
+    <div style={{ background: `black`, }}>
+      <Navigation />
+    </div>
   );
 };
 
 export default App;
-
-const Container = styled.div<{ color: string, }>`
-  text-align: center;
-  margin-top: 2rem;
-  background-color: ${(props) => props.color};
-`
