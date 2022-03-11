@@ -1,14 +1,17 @@
-import React from "react";
+import React from 'react'
+import { styled } from '@linaria/react';
 
-const Menu: React.FC = () => {
-
-    
+export const MainMenu: React.FC = () => {
 
     return (
-        <div className="card">
-        </div>
+        <StyledDiv>
+            Основной раздел
+        </StyledDiv>
     );
 };
 
-
-export default Menu;
+const StyledDiv = styled.div`
+    margin-top: 0.5rem;
+    margin-left: 20rem;
+    line-height: 100%
+`

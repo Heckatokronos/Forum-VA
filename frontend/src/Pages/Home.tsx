@@ -1,16 +1,23 @@
 import React from "react";
-import Navigation from "../Components/Navbar";
+import { Navigation } from "../Components/Navbar";
+import { styled } from "@linaria/react";
+import { MainPanel } from "../Components/MainPanel";
+import { MainMenu } from "../Components/MainMenu";
 
-const Home: React.FC = () => {
+
+export const Home: React.FC = () => {
 
 
 
     return (
-        <div>
-            <Navigation />
-        </div>
+        <StyledDiv>
+           <Navigation />
+           <MainMenu />
+           <MainPanel />
+        </StyledDiv>
     );
 }
 
-
-export default Home;
+const StyledDiv = styled.div`
+    background-color: black
+`

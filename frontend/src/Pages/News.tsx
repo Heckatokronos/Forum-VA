@@ -1,14 +1,14 @@
 import React from "react";
+import { Navigation } from "../Components/Navbar";
 
-const News: React.FC = () => {
+export const News: React.FC = () => {
 
     
 
     return (
         <div className="card">
+            <Navigation />
         </div>
     );
 };
 
-
-export default News;
