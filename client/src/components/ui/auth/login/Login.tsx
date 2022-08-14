@@ -47,11 +47,13 @@ export function Login() {
                                 <p className="mt-2">
                                     Ещё не зарегестрированны?
                                 </p>
-                                <Button
-                                    type="button"
-                                >
-                                    <Link to='/register'>Создать аккаунт</Link>
-                                </Button>
+                                <Link to='/register'>
+                                    <Button
+                                        type="button"
+                                    >
+                                        Создать аккаунт
+                                    </Button>
+                                </Link>
                             </div>
                         </div>
                     </div>

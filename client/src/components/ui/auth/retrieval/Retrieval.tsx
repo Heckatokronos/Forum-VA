@@ -1,5 +1,7 @@
 import { Button, DivMain, Input } from "../../../styled-components"
 import tw from "tailwind-styled-components";
+import { Link } from "react-router-dom";
+
 
 
 export function Retrieval() {
@@ -23,6 +25,9 @@ export function Retrieval() {
                     <Button className="ml-auto mr-auto">
                         Отправить
                     </Button>
+                    <b>
+                        <Link to="/login">Вернуться на страницу входа</Link>
+                    </b>
                 </form>
             </DivMain>
         </>

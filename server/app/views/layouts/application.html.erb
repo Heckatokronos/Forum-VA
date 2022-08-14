@@ -8,6 +8,17 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+
+    <%= link_to 'Index Page', posts_path, class: 'nav-link text-white' %>
+
+      <% if user_signed_in? %>
+        <p class="navbar-text navbar-right text-white">Signed in as <%= current_user.email %>
+          <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+        </p>
+      <% else %>
+        <%= link_to 'Sign in', new_user_session_path, class: 'nav-link text-white' %>
+        <%= link_to 'Sign up', new_user_registration_path, class: 'nav-link text-white' %>
+      <% end %>
   </head>
 
   <body>

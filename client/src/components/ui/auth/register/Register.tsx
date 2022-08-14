@@ -14,7 +14,7 @@ export function Register() {
                     <div className="inline-block w-auto ml-auto mr-auto">
                         <div className="mb-4 inline-block m-3 ml-auto">
                             <p className="font-bold text-3xl w-[35rem]">
-                                Присоедняйтесь к сообществу Vinyl Alliance
+                                Присоедняйтесь к сообществу
                             </p>
                         </div>
                         <div>
@@ -42,15 +42,12 @@ export function Register() {
                                     placeholder="Повторите ваш пароль"
                                     autoComplete='On'
                                 />
-                                <Button type="submit" > Присоединяйтесь </Button>
                             </form>
-                            <div className='flex space-x-2'>
+                            <div className='flex mt-4 space-x-2'>
+                                <Button type="submit" > Присоединяйтесь </Button>
                                 <p className="mt-2">
-                                    Уже зарегестрированны?
+                                    <Link to="/login">Уже зарегестрированны? </Link>
                                 </p>
-                                <Button>
-                                    <Link to="/login">Войти</Link>
-                                </Button>
                             </div>
                         </div>
                     </div>
