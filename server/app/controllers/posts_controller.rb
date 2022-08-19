@@ -4,6 +4,7 @@ class PostsController < ApplicationController
   # GET /posts or /posts.json
   def index
     @posts = Post.all
+
   end
 
   # GET /posts/1 or /posts/1.json
@@ -22,7 +23,8 @@ class PostsController < ApplicationController
 
   # POST /posts or /posts.json
   def create
-    @post = Post.new(post_params)
+    @post = Post.new(post_params.merge(user_id: current_user))
+    @post.user = current_user
 
     respond_to do |format|
       if @post.save
@@ -67,6 +69,7 @@ class PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:title, :body)
+      params.require(:post).permit(:title, :body, :user_id)
     end
+
 end

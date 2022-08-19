@@ -8,6 +8,9 @@ class User < ApplicationRecord
   attr_writer :login
   
   validate :validate_username
+  
+  has_many :posts, dependent: :destroy
+
 
   def validate_username
     if User.where(email: username).exists?
