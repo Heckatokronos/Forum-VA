@@ -10,6 +10,7 @@ class User < ApplicationRecord
   validate :validate_username
   
   has_many :posts, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
 
   def validate_username
