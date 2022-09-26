@@ -15,6 +15,10 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
         <Route path='/retrieval' element={<Retrieval />} />
+<<<<<<< HEAD
+=======
+        <Route path='/post' element={<Post />} />
+>>>>>>> butt
       </Routes>
     </>
   );
