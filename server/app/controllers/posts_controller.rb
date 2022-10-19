@@ -14,9 +14,6 @@ class PostsController < ApplicationController
   def new
     @post = Post.new
   end
-  select point, date, inc, out
-  from Income_o
-  full join Outcome_o using(point, date)
 
   # GET /posts/1/edit
   def edit
