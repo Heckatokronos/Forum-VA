@@ -8,3 +8,9 @@
 
   <%= button_to "Destroy this post", @post, method: :delete %>
 </div>
+
+<p>
+  <strong>Comments</strong>
+  <%= render @post.comments %>
+  <%= render partial: 'comments/form', locals: { post: @post} %>
+</p>

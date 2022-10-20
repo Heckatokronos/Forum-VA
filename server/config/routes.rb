@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
 
   namespace 'api' do
     namespace 'v1' do
